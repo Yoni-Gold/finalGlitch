@@ -18,7 +18,7 @@ function checkHttps(request, response, next) {
 app.all("*", checkHttps)
 
 
-app.use(express.static(path.join(__dirname, '../src/index.js')));
+// app.use(express.static(path.join(__dirname, '../src/index.js')));
 
 const dataJSON = JSON.parse(fs.readFileSync(path));
 
