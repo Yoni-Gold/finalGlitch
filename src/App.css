@@ -1,0 +1,183 @@
+
+#main {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+}
+
+body {
+    background-image: url("./media/background.png");
+}
+
+.ticketList {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    grid-template-columns: auto;
+}
+
+.ticketFlex {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    grid-template-columns: auto auto auto;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: lighter;
+    font-family: "Monoton";
+    margin-bottom: 4px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 26px;
+    text-decoration: underline;
+    font-family: "Cooper Black";
+}
+
+h4 {
+    font-family: "Broadway";
+    font-size: 20px;
+}
+
+#searchInput{
+    border-radius: 20px;
+    outline: none;
+    background-color: rgba(200 , 200 , 200, 0.3);
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid darkgray;
+
+    width: 120px;
+    transition: width 0.4s linear ,border-color 0.4s linear;
+}
+
+#searchInput:hover{
+    border-color:black;
+}
+
+#searchInput:focus{
+    width: 220px;
+    border: 2px solid black;
+}
+
+#subMain {
+    display: flex;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.restoreAnimation {
+    display: inline-flex;
+    animation-name: restore;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    margin: 20px;
+
+    border-radius: 15px;
+    outline: none;
+    background-color: rgba(200 , 200 , 200, 0.3);
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid darkgray;
+    font-size: 14px;
+    font-family: "Broadway";
+
+    transition: border-color 0.4s linear;
+}
+
+.restoreAnimation:hover {
+    border-color:black;
+}
+
+@keyframes restore {
+    0% {
+        opacity: 0;
+        width: 10px;
+        height: 5px;
+        color: rgba(0 , 0 , 0 , 0);
+    }
+
+    30% {
+        width: 180px;
+        height: 30px;
+        opacity: 0.3;
+        color: rgba(0 , 0 , 0 , 0);
+    }
+
+    100% {
+        width: 180px;
+        height: 30px;
+        opacity: 1;   
+        color: rgba(0 , 0 , 0 , 1);
+    }
+}
+
+.hideTicketButton {
+    border: none;
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    left: 360px;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: "MV Boli";
+    height: auto;
+    cursor: pointer;
+    outline: none;
+
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+}
+
+.ticket:hover > .hideTicketButton {
+    opacity: 1;
+  }
+
+.ticket {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    width: 400px;
+    background-image: url("./media/div.png");
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+    font-size: 16px;
+    padding: 10px;
+    margin: 18px;
+}
+
+.smallText {
+    color: darkgray;
+    font-size: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: url("./media/scrollTrack.png");
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-image: url("./media/background.png");
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 2px solid white;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+
